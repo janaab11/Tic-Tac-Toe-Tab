@@ -4,11 +4,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font: 15px "Century Gothic", Futura, sans-serif;
+  font: 10px "Century Gothic", Futura, sans-serif;
   margin: 50px;
-  display:flex;
+  /* display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:center; */
   background-color: #282c34;
   color: #a5a3a3;
 }

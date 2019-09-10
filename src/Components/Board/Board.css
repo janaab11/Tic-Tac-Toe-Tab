@@ -3,3 +3,8 @@
     content: "";
     display: table;
   }
+
+.board{
+  display:flex;
+  flex-direction: column;
+}

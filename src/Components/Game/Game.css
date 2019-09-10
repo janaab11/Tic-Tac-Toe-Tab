@@ -1,39 +1,41 @@
 ol, ul {
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content:center;
-  align-items:flex-start;
+  align-items:flex-center;
 }
 
 .game-extended{
   display:flex;
-  flex-direction:column;
+  flex-direction:column-reverse;
   align-items:center;
   justify-content:space-between;
 }
 
 .game-info-board{
   display:flex;
-  flex-direction:column;
+  flex-direction:column-reverse;
   justify-content:space-between;
   align-items:center;
 }
 
 .game-info {
-  margin-bottom: 20px;
-  font-size:20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size:11px;
   display:flex;
   font-weight:bold;
 }
 
 .reset-button{
-  margin-top:40px;
+  /* margin-top:20px; */
+  margin-bottom:40px;
   border: 2px solid #a5a3a3;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 14px;
   color: #282c34;
   background-color: #a5a3a3;
@@ -41,29 +43,30 @@ ol, ul {
 }
 
 .moves-list-extended{
-  margin-left: 80px;
+  /* margin-left: 30px; */
   display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  align-items:flex-start;
+  flex-direction:column-reverse;
+  justify-content:center;
+  align-items:center;
 }
 
 .moves-list-button{
+  margin-left: 2px;
   border: 2px solid #282c34;
-  font-size: 15px;
+  font-size: 10px;
   font-weight:normal;
-  line-height: 18px;
+  line-height: 13px;
   color: #282c34;
   background-color: #a5a3a3;
 }
 
 .desc-button{
   font-weight:bold;
-  font-size:12px;
-  margin-bottom: 10px;
+  font-size:8px;
+  margin-right: 15px;
 }
 
 .check-box{
-  margin-left:10px;
-  margin-right:10px;
+  /* margin-left:10px; */
+  margin-right:5px;
 } 
