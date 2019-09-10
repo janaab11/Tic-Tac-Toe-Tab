@@ -32,7 +32,8 @@ class Game extends React.Component {
     this.setState({
       history: history,
       stepNumber: history.length - 1,
-      xIsNext: !this.state.xIsNext
+      xIsNext: !this.state.xIsNext,
+      stepClicked: null
     });
   }
 
@@ -59,7 +60,8 @@ class Game extends React.Component {
       ],
       stepNumber: 0,
       xIsNext: true,
-      descending: false
+      descending: false,
+      stepClicked: null
     });
   }
 
