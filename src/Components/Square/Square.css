@@ -1,18 +1,18 @@
 .square {
   background: #a5a3a3;
-  border: 5px solid #282c34;
+  border: 0.5vw solid #282c34;
   float: left;
-  font-size: 45px;
+  font-size: 5.5vw;
   font-weight: bold;
-  line-height: 34px;
-  height: 64px;
-  margin-right: 2px;
-  margin-top: -2px;
-  margin-bottom:2px;
-  margin-left: -2px;
+  line-height: 5vw;
+  height: 9vw;
+  margin-right: 0.2vw;
+  margin-top: -0.2vw;
+  margin-bottom:0.2vw;
+  margin-left: -0.2vw;
   padding: 0;
   text-align: center;
-  width: 64px;
+  width: 9vw;
   color: #282c34;
 }
   

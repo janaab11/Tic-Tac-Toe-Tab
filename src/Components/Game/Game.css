@@ -1,11 +1,12 @@
 ol, ul {
-  padding-left: 30px;
+  padding-left: 2vw;
 }
 
 .game {
+  /* background-color: white; */
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content:space-evenly;
   align-items:flex-start;
 }
 
@@ -24,46 +25,46 @@ ol, ul {
 }
 
 .game-info {
-  margin-bottom: 20px;
-  font-size:20px;
+  margin-bottom: 2.5vw;
+  font-size:3vw;
   display:flex;
   font-weight:bold;
 }
 
 .reset-button{
-  margin-top:40px;
-  border: 2px solid #a5a3a3;
-  font-size: 15px;
-  line-height: 14px;
+  margin-top:5vw;
+  border: 0.5vw solid #a5a3a3;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
   color: #282c34;
   background-color: #a5a3a3;
   font-weight:bolder;
 }
 
 .moves-list-extended{
-  margin-left: 80px;
+  margin-top: 4.5vw;
   display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
+  flex-direction:column-reverse;
+  justify-content:space-evenly;
   align-items:flex-start;
 }
 
 .moves-list-button{
-  border: 2px solid #282c34;
-  font-size: 15px;
+  border: 0.2vw solid #282c34;
+  font-size: 1.4vw;
   font-weight:normal;
-  line-height: 18px;
+  line-height: 2vw;
   color: #282c34;
   background-color: #a5a3a3;
 }
 
 .desc-button{
-  font-weight:bold;
-  font-size:12px;
-  margin-bottom: 10px;
+  font-weight:normal;
+  font-size:1.2vw;
+  /* margin-top: 1vw; */
 }
 
 .check-box{
-  margin-left:10px;
-  margin-right:10px;
+  /* margin-left:-1.5vw; */
+  margin-right:1vw;
 } 
