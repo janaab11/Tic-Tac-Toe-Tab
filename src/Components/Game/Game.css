@@ -1,0 +1,69 @@
+ol, ul {
+  padding-left: 30px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.game-extended{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.game-info-board{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.game-info {
+  margin-bottom: 20px;
+  font-size:20px;
+  display:flex;
+  font-weight:bold;
+}
+
+.reset-button{
+  margin-top:40px;
+  border: 2px solid #a5a3a3;
+  font-size: 15px;
+  line-height: 14px;
+  color: #282c34;
+  background-color: #a5a3a3;
+  font-weight:bolder;
+}
+
+.moves-list-extended{
+  margin-left: 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:flex-start;
+}
+
+.moves-list-button{
+  border: 2px solid #282c34;
+  font-size: 15px;
+  font-weight:bold;
+  line-height: 14px;
+  color: #282c34;
+  background-color: #a5a3a3;
+}
+
+.desc-button{
+  font-weight:bold;
+  font-size:12px;
+  margin-bottom: 10px;
+}
+
+.check-box{
+  margin-left:10px;
+  margin-right:10px;
+} 
