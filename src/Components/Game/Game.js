@@ -13,7 +13,8 @@ class Game extends React.Component {
       ],
       stepNumber: 0,
       xIsNext: true,
-      descending: false
+      descending: false,
+      stepClicked: null
     };
   }
 
@@ -38,7 +39,8 @@ class Game extends React.Component {
   goTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: step % 2 === 0
+      xIsNext: step % 2 === 0,
+      stepClicked: step
     });
   }
   
@@ -68,11 +70,14 @@ class Game extends React.Component {
 
     const movesList = history.map((board, step) => {
       const display = step ? "Go to step " + step : "Go to game start";
-
+      const movesListStyle=(step===this.state.stepClicked)?{'font-weight':'bold'}:{};
       return (
         <li key={step}>
-          <button className='moves-list-button' onClick={() => this.goTo(step)}> {display} </button>
-          <div>{(step>0) ? '' : '' }</div>
+          <div>
+            <button style={movesListStyle}
+                    className='moves-list-button' 
+                    onClick={() => this.goTo(step)}> {display} </button>
+          </div>
         </li>
       );
     });
@@ -82,8 +87,6 @@ class Game extends React.Component {
       const reverseList=movesList.reverse();
       list=<ol reversed>{reverseList}</ol>;
     }
-
-    const style=(movesList.length<=1)?{display:'none'}:{};
 
     let status;
     let winningSquares=Array(9).fill(0).map(()=>false)
@@ -98,6 +101,8 @@ class Game extends React.Component {
     } else {
       status = "Draw";
     }
+
+    const descButtonStyle=(movesList.length<=1)?{display:'none'}:{};
 
     return (
       <div className="game">
@@ -117,7 +122,7 @@ class Game extends React.Component {
           </div>
         </div>
         <div className='moves-list-extended'>
-          <div className='desc-button' style={style}>
+          <div className='desc-button' style={descButtonStyle}>
             <label>
               <input className='check-box' 
                      type="checkbox" 

@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Hack The Tab",
   "author": "Kumarmanas Nethil",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Replace new tab screen with a Tic Tac Toe game.",
   "icons": {
     "16": "logo-small.png",
