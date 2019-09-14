@@ -24,23 +24,16 @@ class Game extends React.Component {
   }
 
   componentDidMount(){
-    alert('sending handshake');
+    // alert('sending handshake');
     port.postMessage({caller:'did-mount'});
     port.onMessage.addListener((msg)=>{
-      alert('received state to mount');
       this.setState(msg.state);
-      alert('state mounted')
     });
   }
 
   componentDidUpdate(){
     port.postMessage({caller:'did-update',state:this.state});
-    alert('sent state to save')
-  }
-
-  componentWillUnmount(){
-    alert('unmounting');
-    port.disconnect();
+    // alert('sent state to save')
   }
 
   handleClick(i) {

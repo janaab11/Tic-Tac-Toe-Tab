@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(function(){
-    alert('Installed');
+    // alert('Installed');
 })
 
 let state={
@@ -9,25 +9,22 @@ let state={
         }
       ],
     stepNumber: 0,
-    xIsNext: false,
+    xIsNext: true,
     descending: false,
     stepClicked: null
 };
 
 chrome.runtime.onConnect.addListener(function(port){
-    alert('connect listener');
     port.onMessage.addListener(function(msg){
-        alert('message listener');
         if(msg.caller=='did-mount'){
-            alert('received handshake');
+            // alert('received handshake');
             port.postMessage({state:state});
-            alert('sent state to mount');
+            // alert('sent state to mount');
         } else if (msg.caller=='did-update'){
             state=msg.state;
-            alert('state saved');
         }
     });
     port.onDisconnect.addListener(function(){
-        alert('port disconnected :(');
+        // alert('port disconnected :(');
     });
 });
