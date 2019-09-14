@@ -1,7 +1,11 @@
+/* global chrome */
+
 import React from 'react';
 import './Game.css';
 import Board from '/Users/knethil/projects/my-first-extension/src/Components/Board/Board';
 import {calculateWinner,getWinningSquares} from '/Users/knethil/projects/my-first-extension/src/Utils/helper';
+
+let port=chrome.runtime.connect({name:'game-state'});
 
 class Game extends React.Component {
   constructor(props) {
@@ -17,6 +21,26 @@ class Game extends React.Component {
       descending: false,
       stepClicked: null
     };
+  }
+
+  componentDidMount(){
+    alert('sending handshake');
+    port.postMessage({caller:'did-mount'});
+    port.onMessage.addListener((msg)=>{
+      alert('received state to mount');
+      this.setState(msg.state);
+      alert('state mounted')
+    });
+  }
+
+  componentDidUpdate(){
+    port.postMessage({caller:'did-update',state:this.state});
+    alert('sent state to save')
+  }
+
+  componentWillUnmount(){
+    alert('unmounting');
+    port.disconnect();
   }
 
   handleClick(i) {
