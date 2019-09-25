@@ -5,7 +5,7 @@ import './Game.css';
 import Board from '/Users/knethil/projects/my-first-extension/src/Components/Board/Board';
 import {calculateWinner,getWinningSquares} from '/Users/knethil/projects/my-first-extension/src/Utils/helper';
 
-let port=chrome.runtime.connect({name:'game-state'});
+let port=chrome.runtime.connect({name:'game'});
 
 class Game extends React.Component {
   constructor(props) {
@@ -25,14 +25,14 @@ class Game extends React.Component {
 
   componentDidMount(){
     // alert('sending handshake');
-    port.postMessage({caller:'did-mount'});
+    port.postMessage({caller:'mount'});
     port.onMessage.addListener((msg)=>{
       this.setState(msg.state);
     });
   }
 
   componentDidUpdate(){
-    port.postMessage({caller:'did-update',state:this.state});
+    port.postMessage({caller:'update',state:this.state});
     // alert('sent state to save')
   }
 
